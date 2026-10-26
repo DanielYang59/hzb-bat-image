@@ -5489,7 +5489,7 @@ dependencies = [
 [[package]]
 name = "nomad-battery-space"
 version = "0.2.3"
-source = { git = "https://github.com/nomad-hzb/nomad-battery-space.git?rev=v0.2.3#48e7cd5fcf8d72cf0624f308ea86dfd58c708e88" }
+source = { git = "https://github.com/nomad-hzb/nomad-battery-space.git?rev=v0.2.4_nomad2.0.0compatibility#5ca69090bc067d63ed36e875dd4e0a1c4a9de32d" }
 dependencies = [
     { name = "nomad-baseclasses" },
     { name = "nomad-lab" },
@@ -5557,7 +5557,7 @@ requires-dist = [
     { name = "netcdf4", specifier = "==1.7.2" },
     { name = "nomad-baseclasses", git = "https://github.com/nomad-hzb/nomad-baseclasses.git?rev=v1.0.1" },
     { name = "nomad-baseclasses", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-baseclasses.git?rev=v1.0.1" },
-    { name = "nomad-battery-space", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-battery-space.git?rev=v0.2.3" },
+    { name = "nomad-battery-space", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-battery-space.git?rev=v0.2.4_nomad2.0.0compatibility" },
     { name = "nomad-gui", marker = "extra == 'plugins'", specifier = "==2.0.0" },
     { name = "nomad-lab", extras = ["dev", "infrastructure"], marker = "extra == 'dev'", specifier = "==2.0.0" },
     { name = "nomad-lab", extras = ["infrastructure", "parsing"], specifier = "==2.0.0" },
