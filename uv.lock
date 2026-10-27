@@ -1982,16 +1982,6 @@ wheels = [
 ]
 
 [[package]]
-name = "eelsdbconverter"
-version = "1.0"
-source = { git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point#788eb03dc71ef9b164e2a5ccb9c0209b546f5c38" }
-dependencies = [
-    { name = "nomad-lab" },
-    { name = "pandas" },
-    { name = "requests" },
-]
-
-[[package]]
 name = "elastic-transport"
 version = "9.4.2"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
@@ -5518,7 +5508,6 @@ jupyter = [
     { name = "voila" },
 ]
 plugins = [
-    { name = "eelsdbconverter" },
     { name = "nomad-baseclasses" },
     { name = "nomad-battery-space" },
     { name = "nomad-gui" },
@@ -5549,7 +5538,6 @@ plugins = [
 
 [package.metadata]
 requires-dist = [
-    { name = "eelsdbconverter", marker = "extra == 'plugins'", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
     { name = "ipyaggrid", marker = "extra == 'jupyter'" },
     { name = "ipyvuetify", marker = "extra == 'jupyter'" },
     { name = "ipywidgets", marker = "extra == 'jupyter'" },
