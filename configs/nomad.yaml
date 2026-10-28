@@ -1,7 +1,16 @@
 services:
+  https: true
   api_host: "localhost"
   api_port: 80
   api_base_path: "/backend"
+  admin_user_id: 'see NOMAD_SERVICES_ADMIN_USER_ID value in .env'
+  upload_members_group_search_enabled: true
+  api_secret: 'see NOMAD_SERVICES_API_SECRET value in .env'
+
+fs:
+  north_home_external: 'see NOMAD_FS_NORTH_HOME_EXTERNAL value in .env'
+  public_external: 'see NOMAD_FS_PUBLIC_EXTERNAL value in .env'
+  staging_external: 'see NOMAD_FS_STAGING_EXTERNAL value in .env'
 
 oasis:
   is_oasis: true
@@ -15,8 +24,9 @@ plugins:
           image: ghcr.io/marlewe/hzb-bat-image/jupyter:main
 
 meta:
-  deployment: "oasis"
-  maintainer_email: "me@my-oasis.org"
+  deployment: 'see NOMAD_META_DEPLOYMENT value in .env'
+  deployment_url: 'see NOMAD_META_DEPLOYMENT_URL value in .env'
+  maintainer_email: 'see NOMAD_META_MAINTAINER_EMAIL value in .env'
 
 logstash:
   enabled: false

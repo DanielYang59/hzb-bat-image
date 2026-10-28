@@ -78,7 +78,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:9.5.0
     container_name: nomad_oasis_elastic_9
     environment:
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m -Dhttps.proxyHost=${PROXY_HOST} -Dhttps.proxyPort=${PROXY_PORT} -Dhttps.nonProxyHosts=localhost|127.0.0.1|elastics
       - discovery.type=single-node
       - xpack.security.enabled=false
     volumes:
@@ -197,11 +197,11 @@ services:
     command: python -m nomad.cli admin run action-internal-worker
     healthcheck: *worker-healthcheck
     deploy:
-      replicas: 2
+      replicas: ${WORKER_REPLICA_COUNT}
       resources:
         limits:
-          cpus: "2.0" # Maximum 4 CPU cores
-          memory: 2G # Maximum 8GB RAM
+          cpus: ${WORKER_MAX_CPU_COUNT}
+          memory: ${WORKER_MAX_MEMORY}
 
   # nomad gpu worker (actions)
   # gpu_worker:
