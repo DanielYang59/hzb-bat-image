@@ -106,7 +106,8 @@ services:
     volumes:
       - mongo:/data/db
       - ./.volumes/mongo:/backup
-    command: mongod --logpath=/dev/null # --quiet
+    #command: mongod --logpath=/dev/null # --quiet
+    command: mongod
     healthcheck:
       test:
         - "CMD"
