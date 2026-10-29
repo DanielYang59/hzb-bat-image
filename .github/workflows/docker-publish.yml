@@ -210,13 +210,6 @@ jobs:
             docker logs jupyter
             exit 1
           fi
-      - name: Debug on failure
-        if: failure()
-        run: |
-          df -h
-          docker ps -a
-          docker inspect --format '{{json .State.Health}}' jupyter | jq
-          docker logs jupyter
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
