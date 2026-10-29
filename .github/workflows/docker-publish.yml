@@ -187,6 +187,16 @@ jobs:
       JUPYTER_IMAGE: ${{ needs.build.outputs.jupyter_image }}
 
     steps:
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@v1.3.1
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
       - uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref_name }}
