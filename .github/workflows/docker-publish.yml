@@ -215,8 +215,8 @@ jobs:
         run: |
           df -h
           docker ps -a
-          docker inspect --format '{{json .State.Health}}' mongo | jq
-          docker logs mongo
+          docker inspect --format '{{json .State.Health}}' jupyter | jq
+          docker logs jupyter
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
