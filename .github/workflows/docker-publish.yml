@@ -216,7 +216,7 @@ jobs:
           df -h
           docker ps -a
           docker inspect --format '{{json .State.Health}}' nomad_oasis_mongo | jq
-          docker logs nomad_oasis_mongo
+          docker logs mongo
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
